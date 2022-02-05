@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/home/kyle/Desktop/ohioState/reading/katzSeminar/lubinTate"?>
+<?latexml class="article" options="11pt"?>
+<?latexml package="geometry"?>
+<?latexml package="amsmath"?>
+<?latexml package="amsfonts"?>
+<?latexml package="amsthm"?>
+<?latexml package="amssymb"?>
+<?latexml package="fancyhdr"?>
+<?latexml package="tikz-cd"?>
+<?latexml package="epigraph"?>
+<?latexml package="tgpagella"?>
+<?latexml package="fourier"?>
+<?latexml package="fontenc" options="T1"?>
+<!--  %useful␣shortcuts --><!--  %****␣lubinTate.tex␣Line␣25␣**** --><!--  %****␣lubinTate.tex␣Line␣50␣**** --><?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Lubin-Tate Theory</title>
+  <creator role="author">
+    <personname>Kyle Binder</personname>
+  </creator>
+  <date role="creation">Spring 2022</date>
+  <abstract name="Abstract">
+    <p>The goal of this note is to develop the theory of Lubin-Tate formal
+groups and their application to local class field theory. In particular,
+we wish to construct the totally ramified part of the maximal abelian
+of a non-Archimedean local field <Math mode="inline" tex="K" text="K" xml:id="m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">K</XMTok>
+        </XMath>
+      </Math> and give a representation
+<!--  %****␣lubinTate.tex␣Line␣75␣**** -->of its Galois group
+in terms of the units of <Math mode="inline" tex="K" text="K" xml:id="m2">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">K</XMTok>
+        </XMath>
+      </Math>.</p>
+  </abstract>
+  <para xml:id="p1">
+    <p>The first section of this note is an attempt to demonstrate the feasibility
+of using formal group laws to construct the complement of <Math mode="inline" tex="K^{\mathrm{ur}}" text="K ^ ur" xml:id="p1.m1">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">K</XMTok>
+            <XMTok fontsize="70%" role="UNKNOWN">ur</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>
+in <Math mode="inline" tex="K^{\mathrm{ab}}" text="K ^ ab" xml:id="p1.m2">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">K</XMTok>
+            <XMTok fontsize="70%" role="UNKNOWN">ab</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. This approach is derived from a remark of
+Milne in his lecture notes on Class Field Theory
+<cite class="ltx_citemacro_cite">[<bibref bibrefs="milneCFT" separator="," yyseparator=","/>, See note at the end of I.4]</cite>.
+The reader who wishes to bypass the motivation of this theory and see its
+constructions may begin with §2.
+In §2, we define formal group laws and,
+specifically, the Lubin-Tate Group Laws. We prove the needed properties
+of these formal groups in §3, and use these properties to construct the
+field <Math mode="inline" tex="K_{\varpi}" text="K _ varpi" xml:id="p1.m3">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">K</XMTok>
+            <XMTok font="italic" fontsize="70%" name="varpi" role="UNKNOWN">ϖ</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> in §4.</p>
+  </para>
+  <para xml:id="p2">
+    <p>Throughout, let <Math mode="inline" tex="K" text="K" xml:id="p2.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">K</XMTok>
+        </XMath>
+      </Math> be a (non-Archimedean) local field, <Math mode="inline" tex="A" text="A" xml:id="p2.m2">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">A</XMTok>
+        </XMath>
+      </Math> its valuation ring,
+<Math mode="inline" tex="\mathfrak{m}_{A}" text="m _ A" xml:id="p2.m3">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">A</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> its (unique) maximal ideal, <Math mode="inline" tex="\varpi" text="varpi" xml:id="p2.m4">
+        <XMath>
+          <XMTok font="italic" name="varpi" role="UNKNOWN">ϖ</XMTok>
+        </XMath>
+      </Math> a fixed
+uniformizer (also called a <emph font="italic">prime element</emph>: a generator
+of <Math mode="inline" tex="\mathfrak{m}_{A}" text="m _ A" xml:id="p2.m5">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">A</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>), and <Math mode="inline" tex="\kappa" text="kappa" xml:id="p2.m6">
+        <XMath>
+          <XMTok font="italic" name="kappa" role="UNKNOWN">κ</XMTok>
+        </XMath>
+      </Math> the residue field
+<Math mode="inline" tex="A/\mathfrak{m}_{A}" text="A / m _ A" xml:id="p2.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="divide" role="MULOP">/</XMTok>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">A</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <section inlist="toc" xml:id="S1">
+    <tags>
+      <tag>1</tag>
+      <tag role="refnum">1</tag>
+      <tag role="typerefnum">§1</tag>
+    </tags>
+    <title><tag close=" ">1</tag>Why Formal Group Laws? An Excursion in Complex Multiplication of
+Elliptic Curves</title>
+    <para xml:id="S1.p1">
+      <p>Fill in.
+<!--  %****␣lubinTate.tex␣Line␣100␣**** --></p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S2">
+    <tags>
+      <tag>2</tag>
+      <tag role="refnum">2</tag>
+      <tag role="typerefnum">§2</tag>
+    </tags>
+    <title><tag close=" ">2</tag>Formal Groups Laws</title>
+    <para xml:id="S2.p1">
+      <p>A <emph font="italic">formal group law</emph> is a binary operation which endows <Math mode="inline" tex="A\llbracket X\rrbracket" text="A * [\llbracket] * X * [\rrbracket]" xml:id="S2.p1.m1">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMTok font="italic" role="UNKNOWN">A</XMTok>
+              <ERROR class="undefined">\llbracket</ERROR>
+              <XMTok font="italic" role="UNKNOWN">X</XMTok>
+              <ERROR class="undefined">\rrbracket</ERROR>
+            </XMApp>
+          </XMath>
+        </Math>
+with the structure of abelian group and is expressable as a power
+series over <Math mode="inline" tex="A" text="A" xml:id="S2.p1.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMath>
+        </Math>.</p>
+    </para>
+    <theorem class="ltx_theorem_definition" inlist="thm theorem:definition" xml:id="Thmdefinition1">
+      <tags>
+        <tag>Definition 1</tag>
+        <tag role="refnum">1</tag>
+        <tag role="typerefnum">Definition 1</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Definition 1</text></tag>.</title>
+      <para xml:id="Thmdefinition1.p1">
+        <p>For a unital, commutative ring <Math mode="inline" tex="A" text="A" xml:id="Thmdefinition1.p1.m1">
+            <XMath>
+              <XMTok font="italic" role="UNKNOWN">A</XMTok>
+            </XMath>
+          </Math>, a <emph font="italic">formal group law</emph> is
+an element <Math mode="inline" tex="F\in A\llbracket X,Y\rrbracket" text="F element-of list@(A * [\llbracket] * X, Y * [\rrbracket])" xml:id="Thmdefinition1.p1.m2">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="Thmdefinition1.p1.m2.1"/>
+                    <XMRef idref="Thmdefinition1.p1.m2.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMApp xml:id="Thmdefinition1.p1.m2.1">
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">A</XMTok>
+                      <ERROR class="undefined">\llbracket</ERROR>
+                      <XMTok font="italic" role="UNKNOWN">X</XMTok>
+                    </XMApp>
+                    <XMTok role="PUNCT">,</XMTok>
+                    <XMApp xml:id="Thmdefinition1.p1.m2.2">
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">Y</XMTok>
+                      <ERROR class="undefined">\rrbracket</ERROR>
+                    </XMApp>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math> satisfying:</p>
+        <enumerate xml:id="S2.I1">
+          <item xml:id="S2.I1.i1">
+            <tags>
+              <tag>1.</tag>
+              <tag role="refnum">1</tag>
+              <tag role="typerefnum">item 1</tag>
+            </tags>
+            <para xml:id="S2.I1.i1.p1">
+              <p>(Associativity) <Math mode="inline" tex="F(X,F(Y,Z))=F(F(X,Y),Z)" text="F * open-interval@(X, F * open-interval@(Y, Z)) = F * open-interval@(F * open-interval@(X, Y), Z)" xml:id="S2.I1.i1.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i1.p1.m1.3"/>
+                            <XMRef idref="S2.I1.i1.p1.m1.7"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i1.p1.m1.3">X</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMApp xml:id="S2.I1.i1.p1.m1.7">
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                              <XMDual>
+                                <XMApp>
+                                  <XMTok meaning="open-interval"/>
+                                  <XMRef idref="S2.I1.i1.p1.m1.1"/>
+                                  <XMRef idref="S2.I1.i1.p1.m1.2"/>
+                                </XMApp>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i1.p1.m1.1">Y</XMTok>
+                                  <XMTok role="PUNCT">,</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i1.p1.m1.2">Z</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i1.p1.m1.8"/>
+                            <XMRef idref="S2.I1.i1.p1.m1.6"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S2.I1.i1.p1.m1.8">
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                              <XMDual>
+                                <XMApp>
+                                  <XMTok meaning="open-interval"/>
+                                  <XMRef idref="S2.I1.i1.p1.m1.4"/>
+                                  <XMRef idref="S2.I1.i1.p1.m1.5"/>
+                                </XMApp>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i1.p1.m1.4">X</XMTok>
+                                  <XMTok role="PUNCT">,</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i1.p1.m1.5">Y</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i1.p1.m1.6">Z</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                  </XMath>
+                </Math>.</p>
+            </para>
+          </item>
+          <item xml:id="S2.I1.i2">
+            <tags>
+              <tag>2.</tag>
+              <tag role="refnum">2</tag>
+              <tag role="typerefnum">item 2</tag>
+            </tags>
+            <para xml:id="S2.I1.i2.p1">
+              <p>(Identity) <Math mode="inline" tex="F(X,0)=X" text="F * open-interval@(X, 0) = X" xml:id="S2.I1.i2.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i2.p1.m1.1"/>
+                            <XMRef idref="S2.I1.i2.p1.m1.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i2.p1.m1.1">X</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok meaning="0" role="NUMBER" xml:id="S2.I1.i2.p1.m1.2">0</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok font="italic" role="UNKNOWN">X</XMTok>
+                    </XMApp>
+                  </XMath>
+                </Math>.</p>
+            </para>
+          </item>
+          <item xml:id="S2.I1.i3">
+            <tags>
+              <tag>3.</tag>
+              <tag role="refnum">3</tag>
+              <tag role="typerefnum">item 3</tag>
+            </tags>
+            <para xml:id="S2.I1.i3.p1">
+              <p>(Inverse) There is a unique <Math mode="inline" tex="G\in A\llbracket x\rrbracket" text="G element-of A * [\llbracket] * x * [\rrbracket]" xml:id="S2.I1.i3.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">G</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">A</XMTok>
+                        <ERROR class="undefined">\llbracket</ERROR>
+                        <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        <ERROR class="undefined">\rrbracket</ERROR>
+                      </XMApp>
+                    </XMApp>
+                  </XMath>
+                </Math>
+such that <Math mode="inline" tex="F(G(X),X)=0" text="F * open-interval@(G * X, X) = 0" xml:id="S2.I1.i3.p1.m2">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i3.p1.m2.3"/>
+                            <XMRef idref="S2.I1.i3.p1.m2.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S2.I1.i3.p1.m2.3">
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">G</XMTok>
+                              <XMDual>
+                                <XMRef idref="S2.I1.i3.p1.m2.1"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i3.p1.m2.1">X</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i3.p1.m2.2">X</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                  </XMath>
+                </Math>.</p>
+            </para>
+          </item>
+          <item xml:id="S2.I1.i4">
+            <tags>
+              <tag>4.</tag>
+              <tag role="refnum">4</tag>
+              <tag role="typerefnum">item 4</tag>
+            </tags>
+            <para xml:id="S2.I1.i4.p1">
+              <p>(Commutativity) <Math mode="inline" tex="F(X,Y)=F(Y,X)" text="F * open-interval@(X, Y) = F * open-interval@(Y, X)" xml:id="S2.I1.i4.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i4.p1.m1.1"/>
+                            <XMRef idref="S2.I1.i4.p1.m1.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i4.p1.m1.1">X</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i4.p1.m1.2">Y</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i4.p1.m1.3"/>
+                            <XMRef idref="S2.I1.i4.p1.m1.4"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i4.p1.m1.3">Y</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i4.p1.m1.4">X</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                  </XMath>
+                </Math>.</p>
+            </para>
+          </item>
+          <item xml:id="S2.I1.i5">
+            <tags>
+              <tag>5.</tag>
+              <tag role="refnum">5</tag>
+              <tag role="typerefnum">item 5</tag>
+            </tags>
+            <para xml:id="S2.I1.i5.p1">
+              <p><Math mode="inline" tex="F(X,Y)=X+Y+\textrm{ Higher Order Terms}" text="F * open-interval@(X, Y) = X + Y + [ Higher Order Terms]" xml:id="S2.I1.i5.p1.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S2.I1.i5.p1.m1.1"/>
+                            <XMRef idref="S2.I1.i5.p1.m1.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i5.p1.m1.1">X</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S2.I1.i5.p1.m1.2">Y</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">X</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">Y</XMTok>
+                        <XMText> Higher Order Terms</XMText>
+                      </XMApp>
+                    </XMApp>
+                  </XMath>
+                </Math>.</p>
+            </para>
+          </item>
+        </enumerate>
+      </para>
+    </theorem>
+    <theorem class="ltx_theorem_nb" inlist="thm theorem:nb" xml:id="Thmnbx1">
+      <tags>
+        <tag>N.B</tag>
+        <tag role="typerefnum">N.B</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">N.B</text></tag>.</title>
+      <para xml:id="Thmnbx1.p1">
+        <p>Properties 3 and 5 are superfluous. For example, Property 5 is quickly deduced
+from Properties 2 and 4. The reader may wish to verify Property 3 follows from
+Properties 2 and 4 as well.
+<!--  %****␣lubinTate.tex␣Line␣125␣**** --></p>
+      </para>
+    </theorem>
+    <para xml:id="S2.p2">
+      <p>This group law only holds formally for an arbitrary ring <Math mode="inline" tex="A" text="A" xml:id="S2.p2.m1">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMath>
+        </Math>, <emph font="italic">viz.</emph>
+one cannot “evaluate” <Math mode="inline" tex="F" text="F" xml:id="S2.p2.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">F</XMTok>
+          </XMath>
+        </Math> at elements of <Math mode="inline" tex="A" text="A" xml:id="S2.p2.m3">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMath>
+        </Math>.
+However, in our case of <Math mode="inline" tex="A" text="A" xml:id="S2.p2.m4">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMath>
+        </Math> being a complete discrete valuation ring, any
+sum</p>
+      <equation xml:id="S2.Ex1">
+        <Math mode="display" tex="\sum_{i=0}^{\infty}a_{i}x^{i}" text="((sum _ (i = 0)) ^ infinity)@(a _ i * x ^ i)" xml:id="S2.Ex1.m1">
+          <XMath>
+            <XMApp>
+              <XMApp scriptpos="mid">
+                <XMTok role="SUPERSCRIPTOP" scriptpos="mid1"/>
+                <XMApp scriptpos="mid">
+                  <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                  <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                  <XMApp>
+                    <XMTok fontsize="70%" meaning="equals" role="RELOP">=</XMTok>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN">i</XMTok>
+                    <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok fontsize="70%" meaning="infinity" name="infty" role="ID">∞</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">a</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">i</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">i</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+      </equation>
+      <p>for <Math mode="inline" tex="x\in\mathfrak{m}_{A}" text="x element-of m _ A" xml:id="S2.p2.m5">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN">A</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMath>
+        </Math>
+converges. Thus <Math mode="inline" tex="F" text="F" xml:id="S2.p2.m6">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">F</XMTok>
+          </XMath>
+        </Math> actually gives <Math mode="inline" tex="\mathfrak{m}_{A}" text="m _ A" xml:id="S2.p2.m7">
+          <XMath>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">A</XMTok>
+            </XMApp>
+          </XMath>
+        </Math> the structure
+of abelian group. If necessary, we will denote the group operation in
+this case by <Math mode="inline" tex="*_{F}" text="* _ F" xml:id="S2.p2.m8">
+          <XMath>
+            <XMApp meaning="times" role="MULOP">
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok meaning="times" role="MULOP">*</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">F</XMTok>
+            </XMApp>
+          </XMath>
+        </Math>.</p>
+    </para>
+    <para xml:id="S2.p3">
+      <p>Note that if <Math mode="inline" tex="L/K" text="L / K" xml:id="S2.p3.m1">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="divide" role="MULOP">/</XMTok>
+              <XMTok font="italic" role="UNKNOWN">L</XMTok>
+              <XMTok font="italic" role="UNKNOWN">K</XMTok>
+            </XMApp>
+          </XMath>
+        </Math> is a finite extension with
+<Math mode="inline" tex="B" text="B" xml:id="S2.p3.m2">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+          </XMath>
+        </Math> the integral closure of <Math mode="inline" tex="A" text="A" xml:id="S2.p3.m3">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMath>
+        </Math> in <Math mode="inline" tex="L" text="L" xml:id="S2.p3.m4">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">L</XMTok>
+          </XMath>
+        </Math>, then <Math mode="inline" tex="F" text="F" xml:id="S2.p3.m5">
+          <XMath>
+            <XMTok font="italic" role="UNKNOWN">F</XMTok>
+          </XMath>
+        </Math> may also
+be “evaluated” on <Math mode="inline" tex="\mathfrak{m}_{B}" text="m _ B" xml:id="S2.p3.m6">
+          <XMath>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">B</XMTok>
+            </XMApp>
+          </XMath>
+        </Math> and defines an abelian group
+law that extends <Math mode="inline" tex="*_{F}" text="* _ F" xml:id="S2.p3.m7">
+          <XMath>
+            <XMApp meaning="times" role="MULOP">
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok meaning="times" role="MULOP">*</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">F</XMTok>
+            </XMApp>
+          </XMath>
+        </Math> on <Math mode="inline" tex="\mathfrak{m}_{A}" text="m _ A" xml:id="S2.p3.m8">
+          <XMath>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="fraktur" role="UNKNOWN">m</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">A</XMTok>
+            </XMApp>
+          </XMath>
+        </Math>. By passing to
+direct limits we may extend the group law to any algebraic extension
+<Math mode="inline" tex="L/K" text="L / K" xml:id="S2.p3.m9">
+          <XMath>
+            <XMApp>
+              <XMTok meaning="divide" role="MULOP">/</XMTok>
+              <XMTok font="italic" role="UNKNOWN">L</XMTok>
+              <XMTok font="italic" role="UNKNOWN">K</XMTok>
+            </XMApp>
+          </XMath>
+        </Math>.</p>
+    </para>
+    <para xml:id="S2.p4">
+      <p>A specific class of formal groups are those which admit an endomorphism
+that approximates the Frobeniuous endomorphism on <Math mode="inline" tex="\kappa" text="kappa" xml:id="S2.p4.m1">
+          <XMath>
+            <XMTok font="italic" name="kappa" role="UNKNOWN">κ</XMTok>
+          </XMath>
+        </Math> and has
+derivative <Math mode="inline" tex="\varpi" text="varpi" xml:id="S2.p4.m2">
+          <XMath>
+            <XMTok font="italic" name="varpi" role="UNKNOWN">ϖ</XMTok>
+          </XMath>
+        </Math> at the origin; elements of this class are called
+<emph font="italic">Lubin-Tate Formal Groups</emph> and are determined to these
+endomorphisms they admit.</p>
+    </para>
+    <theorem class="ltx_theorem_definition" inlist="thm theorem:definition" xml:id="Thmdefinition2">
+      <tags>
+        <tag>Definition 2</tag>
+        <tag role="refnum">2</tag>
+        <tag role="typerefnum">Definition 2</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Definition 2</text></tag>.</title>
+      <para xml:id="Thmdefinition2.p1">
+        <p>Let</p>
+        <equation xml:id="S2.Ex2">
+          <Math mode="display" tex="\mathfrak{F}_{\varpi}=\left\{f\in A\llbracket X\rrbracket:f(X)\equiv{\varpi X%&#10;\bmod\textrm{deg. 2}}\textrm{ and }f(X)\equiv X^{q}\bmod\varpi\right\}." text="F _ varpi = conditional-set@(f element-of A * [\llbracket] * X * [\rrbracket], f * X equivalent-to modulo@(varpi * X, [deg. 2 and ] * f * X) equivalent-to modulo@(X ^ q, varpi))" xml:id="S2.Ex2.m1">
+            <XMath>
+              <XMDual>
+                <XMRef idref="S2.Ex2.m1.3"/>
+                <XMWrap>
+                  <XMApp xml:id="S2.Ex2.m1.3">
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                      <XMTok font="fraktur" role="UNKNOWN">F</XMTok>
+                      <XMTok font="italic" fontsize="70%" name="varpi" role="UNKNOWN">ϖ</XMTok>
+                    </XMApp>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="conditional-set"/>
+                        <XMRef idref="S2.Ex2.m1.3.1"/>
+                        <XMRef idref="S2.Ex2.m1.3.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="true">{</XMTok>
+                        <XMApp xml:id="S2.Ex2.m1.3.1">
+                          <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+                            <ERROR class="undefined">\llbracket</ERROR>
+                            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+                            <ERROR class="undefined">\rrbracket</ERROR>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok name="colon" role="METARELOP">:</XMTok>
+<!--  %**** lubinTate.tex Line 150 **** -->                        <XMApp xml:id="S2.Ex2.m1.3.2">
+                          <XMTok meaning="multirelation"/>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                            <XMDual>
+                              <XMRef idref="S2.Ex2.m1.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMTok font="italic" role="UNKNOWN" xml:id="S2.Ex2.m1.1">X</XMTok>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                          <XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok>
+                          <XMApp>
+                            <XMTok meaning="modulo" name="bmod" role="MODIFIEROP">mod</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" name="varpi" role="UNKNOWN">ϖ</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">X</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMText>deg. 2 and </XMText>
+                              <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                              <XMDual>
+                                <XMRef idref="S2.Ex2.m1.2"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S2.Ex2.m1.2">X</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok meaning="equivalent-to" name="equiv" role="RELOP">≡</XMTok>
+                          <XMApp>
+                            <XMTok meaning="modulo" name="bmod" role="MODIFIEROP">mod</XMTok>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                              <XMTok font="italic" role="UNKNOWN">X</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">q</XMTok>
+                            </XMApp>
+                            <XMTok font="italic" name="varpi" role="UNKNOWN">ϖ</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="true">}</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMTok role="PERIOD">.</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMath>
+          </Math>
+        </equation>
+      </para>
+      <para xml:id="Thmdefinition2.p2">
+        <p>A <emph font="italic">Lubin-Tate Formal Group</emph> is a formal group <Math mode="inline" tex="F" text="F" xml:id="Thmdefinition2.p2.m1">
+            <XMath>
+              <XMTok font="italic" role="UNKNOWN">F</XMTok>
+            </XMath>
+          </Math> such that, for
+some <Math mode="inline" tex="f\in\mathfrak{F}_{\varpi}" text="f element-of F _ varpi" xml:id="Thmdefinition2.p2.m2">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="fraktur" role="UNKNOWN">F</XMTok>
+                  <XMTok font="italic" fontsize="70%" name="varpi" role="UNKNOWN">ϖ</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>, <Math mode="inline" tex="f" text="f" xml:id="Thmdefinition2.p2.m3">
+            <XMath>
+              <XMTok font="italic" role="UNKNOWN">f</XMTok>
+            </XMath>
+          </Math> is an endomorphism of <Math mode="inline" tex="F" text="F" xml:id="Thmdefinition2.p2.m4">
+            <XMath>
+              <XMTok font="italic" role="UNKNOWN">F</XMTok>
+            </XMath>
+          </Math>;
+that is, <Math mode="inline" tex="f(F(X,Y))=F(f(X),f(Y))" text="f * F * open-interval@(X, Y) = F * open-interval@(f * X, f * Y)" xml:id="Thmdefinition2.p2.m5">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmdefinition2.p2.m5.5"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="Thmdefinition2.p2.m5.5">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="Thmdefinition2.p2.m5.1"/>
+                            <XMRef idref="Thmdefinition2.p2.m5.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="Thmdefinition2.p2.m5.1">X</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="Thmdefinition2.p2.m5.2">Y</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">F</XMTok>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="open-interval"/>
+                      <XMRef idref="Thmdefinition2.p2.m5.6"/>
+                      <XMRef idref="Thmdefinition2.p2.m5.7"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="Thmdefinition2.p2.m5.6">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                        <XMDual>
+                          <XMRef idref="Thmdefinition2.p2.m5.3"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="Thmdefinition2.p2.m5.3">X</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="Thmdefinition2.p2.m5.7">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">f</XMTok>
+                        <XMDual>
+                          <XMRef idref="Thmdefinition2.p2.m5.4"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="Thmdefinition2.p2.m5.4">Y</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>.</p>
+      </para>
+    </theorem>
+    <para xml:id="S2.p5">
+      <p>Let us conclude this section by showing there are an abundance of these
+formal groups.</p>
+    </para>
+    <theorem class="ltx_theorem_prop" inlist="thm theorem:prop" xml:id="Thmprop1">
+      <tags>
+        <tag>Proposition 1</tag>
+        <tag role="refnum">1</tag>
+        <tag role="typerefnum">Proposition 1</tag>
+      </tags>
+      <title class="ltx_runin"><tag><text font="bold">Proposition 1</text></tag>.</title>
+      <para xml:id="Thmprop1.p1">
+        <p><text font="italic">For any <Math mode="inline" tex="f\in\mathfrak{F}_{\varpi}" text="f element-of F _ varpi" xml:id="Thmprop1.p1.m1">
+              <XMath>
+                <XMApp>
+                  <XMTok font="upright" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok role="UNKNOWN">f</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="fraktur upright" role="UNKNOWN">F</XMTok>
+                    <XMTok fontsize="70%" name="varpi" role="UNKNOWN">ϖ</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMath>
+            </Math>, there is a unique Lubin-Tate
+formal group, <Math mode="inline" tex="F_{f}" text="F _ f" xml:id="Thmprop1.p1.m2">
+              <XMath>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok role="UNKNOWN">F</XMTok>
+                  <XMTok fontsize="70%" role="UNKNOWN">f</XMTok>
+                </XMApp>
+              </XMath>
+            </Math>, such that <Math mode="inline" tex="f" text="f" xml:id="Thmprop1.p1.m3">
+              <XMath>
+                <XMTok role="UNKNOWN">f</XMTok>
+              </XMath>
+            </Math> is an endomorphism on <Math mode="inline" tex="F_{f}" text="F _ f" xml:id="Thmprop1.p1.m4">
+              <XMath>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok role="UNKNOWN">F</XMTok>
+                  <XMTok fontsize="70%" role="UNKNOWN">f</XMTok>
+                </XMApp>
+              </XMath>
+            </Math>.</text></p>
+      </para>
+    </theorem>
+  </section>
+  <section inlist="toc" xml:id="S3">
+    <tags>
+      <tag>3</tag>
+      <tag role="refnum">3</tag>
+      <tag role="typerefnum">§3</tag>
+    </tags>
+    <title><tag close=" ">3</tag>Properties of Lubin-Tate Formal Groups</title>
+  </section>
+  <section inlist="toc" xml:id="S4">
+    <tags>
+      <tag>4</tag>
+      <tag role="refnum">4</tag>
+      <tag role="typerefnum">§4</tag>
+    </tags>
+    <title><tag close=" ">4</tag>Constructing Totally Ramified Abelian Extensions</title>
+    <para xml:id="S4.p1">
+      <p><cite><bibref bibrefs="ANT" show="nothing"/></cite></p>
+    </para>
+  </section>
+  <bibliography bibstyle="plain" citestyle="numbers" files="lubinTate" xml:id="bib">
+    <title>References</title>
+  </bibliography>
+<!--  %****␣lubinTate.tex␣Line␣175␣**** -->  <pagination role="newpage"/>
+</document>
