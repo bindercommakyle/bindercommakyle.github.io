@@ -24,9 +24,9 @@ author:
   avatar           : "profile.png"
   name             : "Kyle Binder"
   pronouns         : # example: "she/her"  
-  bio              : "6th Year Ph.D. Student"
+  bio              : "6th Year Ph.D. Student \br Algebraic Geometry, Matroid Theory, and Combinatorics"
   location         : 
-  employer         : "The Ohi State University"
+  employer         : "The Ohio State University"
   uri              : # URL
   email            : "binder.65@osu.edu" 
 
@@ -48,7 +48,7 @@ author:
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : #"bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
