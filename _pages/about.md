@@ -7,4 +7,12 @@ redirect_from:
   - /about.html
 ---
 
-About me
+I am a 6th year Ph.D. student at Ohio State studying algebraic and tropical geometry, matroid theory, and combinatorics. My advisor is Eric Katz.
+
+Recently I've been thinking about problems relating to:
+1. How the geometry of hyperplane arrangements is reflected in the associated matroids.
+2. Analogues of the Matroid Chow Groups introduced by Adiprasito, Huh, and Katz.
+
+I am on the job market this year.
+
+Here is my [CV](https://www.bindercommakyle.github.io/cv7-11-2024.pdf).
