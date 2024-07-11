@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Kyle Binder"
   pronouns         : # example: "she/her"  
-  bio              : "6th Year Ph.D. Student \\ Algebraic Geometry, Matroid Theory, and Combinatorics"
+  bio              : "6th Year Ph.D. Student <br> Algebraic Geometry, Matroid Theory, and Combinatorics"
   location         : 
   employer         : "The Ohio State University"
   uri              : # URL
