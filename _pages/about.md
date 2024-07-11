@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Kyle Binder"
+title: "Home Page"
 author_profile: true
 redirect_from: 
   - /about/
