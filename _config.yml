@@ -21,7 +21,7 @@ repository               : "bindercommakyle/bindercommakyle.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "kyleOval.png"
+  avatar           : "kyleOval.jpg"
   name             : "Kyle Binder"
   pronouns         : # example: "she/her"  
   bio              : "6th Year Ph.D. Student <br> Algebraic Geometry, Matroid Theory, and Combinatorics"
