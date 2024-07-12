@@ -15,4 +15,4 @@ Recently I've been thinking about problems relating to:
 
 I am on the job market this year.
 
-Here is my [CV](https://www.bindercommakyle.github.io/cv7-11-2024.pdf).
+Here is my [CV](https://www.bindercommakyle.github.io/files/cv7-11-2024.pdf).
