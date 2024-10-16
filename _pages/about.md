@@ -11,7 +11,8 @@ I am a 6th year Ph.D. student at Ohio State studying algebraic and tropical geom
 
 Recently I've been thinking about problems relating to:
 1. How the geometry of hyperplane arrangements is reflected in the associated matroids.
-2. Cohomology of Toric Varieties and Minimal Resolutions of Stanley--Reisner Rings.
+2. Cohomology of toric varieties and minimal free resolutions of Stanley--Reisner rings.
+3. Intersection numbers in the chow ring of matroids.
 
 I am on the job market this year.
 
