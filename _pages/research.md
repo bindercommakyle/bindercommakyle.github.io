@@ -14,4 +14,4 @@ Preprint. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
 Preprint. [https://arxiv.org/abs/1908.07382](https://arxiv.org/abs/1908.07382).
 
 **On 2-coloring the integers to forbid a distance and monochromatic translates of a triangle** <br>
-Geombinatorics **27*** (2018), no.4, 137–146.
+Geombinatorics **27** (2018), no.4, 137–146.
