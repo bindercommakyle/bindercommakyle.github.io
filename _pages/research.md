@@ -6,6 +6,9 @@ author_profile: true
 ---
 
 ## Papers and Preprints
+**Tor Groups of the Stanley--Reisner Ring of a Matroid** <br>
+Soon to be on the arXiv. 
+
 **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
 Preprint. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
 
