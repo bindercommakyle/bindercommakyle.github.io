@@ -15,6 +15,6 @@ Recently I've been thinking about problems relating to:
 3. Intersection numbers in the Chow ring of matroids.
 4. Combinatorial commutative algebra.
 
-I am on the job market this year.
+Starting in Fall 2025 I will be a Postdoctoral Researcher at Louisiana State University.
 
 Here is my [CV](https://bindercommakyle.github.io/files/cv.pdf).
