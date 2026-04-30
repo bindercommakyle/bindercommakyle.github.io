@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 ## Papers and Preprints
-**Tor Groups of the Stanley--Reisner Ring of a Matroid** <br>
+**The Singular Cohomology Ring of a Matroid** <br>
 Preprint. [https://arxiv.org/abs/2412.05732](https://arxiv.org/abs/2412.05732)
 
 **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
