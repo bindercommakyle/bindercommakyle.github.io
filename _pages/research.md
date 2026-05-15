@@ -6,11 +6,14 @@ author_profile: true
 ---
 
 ## Papers and Preprints
+**Singular Cohomology Rings of Uniform Matroids: Combinatorics and Lefschetz Properties** <br>
+Preprint. 
+
 **The Singular Cohomology Ring of a Matroid** <br>
-Preprint. [https://arxiv.org/abs/2412.05732](https://arxiv.org/abs/2412.05732)
+Submitted. [https://arxiv.org/abs/2412.05732](https://arxiv.org/abs/2412.05732)
 
 **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
-Preprint. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
+Submitted. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
 
 ## From my Undergrad Days
 **Limit Sets and Internal Transitivity in Free Group Actions** (with Jonathan Meddaugh) <br>
