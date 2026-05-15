@@ -24,9 +24,9 @@ author:
   avatar           : "kyleOval.jpg"
   name             : "Kyle Binder"
   pronouns         : # example: "she/her"  
-  bio              : "Postdoc <br> Algebraic Geometry, Matroids, <br> and Combinatorics"
+  bio              : "Postdoc <br> <br> Algebraic Geometry, Matroids, <br> and Combinatorics"
   location         : 
-  employer         : "Lousiana State University"
+  employer         : "Louisiana State University"
   uri              : # URL
   email            : "kbinde1@lsu.edu" 
 
