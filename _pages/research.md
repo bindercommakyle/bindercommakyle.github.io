@@ -17,7 +17,7 @@ Submitted. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
 
 ## Dissertation
 **Tor Groups of the Stanley--Reisner Ring of a Matroid**
-[Link]{http://rave.ohiolink.edu/etdc/view?acc_num=osu1744360382902721} <br>
+[http://rave.ohiolink.edu/etdc/view?acc_num=osu1744360382902721]{Link} <br>
 Most of the results from my dissertation appear in the papers on the singular cohomology rings of matroids.
 
 ## From my Undergrad Days
