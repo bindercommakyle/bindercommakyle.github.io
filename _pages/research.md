@@ -17,8 +17,8 @@ Submitted. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
 
 ## Dissertation
 **Tor Groups of the Stanley--Reisner Ring of a Matroid** <br>
-[Link to PDF](http://rave.ohiolink.edu/etdc/view?acc_num=osu1744360382902721).
 Most of the results from my dissertation appear in papers 1 and 2 above.
+[Link to PDF](http://rave.ohiolink.edu/etdc/view?acc_num=osu1744360382902721).
 
 ## From my Undergrad Days
 1. **Limit Sets and Internal Transitivity in Free Group Actions** (with Jonathan Meddaugh) <br>
