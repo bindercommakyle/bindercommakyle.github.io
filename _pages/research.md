@@ -7,7 +7,7 @@ author_profile: true
 
 ## Papers and Preprints
 1. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
-Preprint. [PDF](https://bindercommakyle.github.io/files/cohomologyUniformMatroidsPreprint.pdf)
+Preprint. [PDF](https://bindercommakyle.github.io/files/singularCohomologyUniformPreliminary.pdf)
 
 2. **The Singular Cohomology Ring of a Matroid** <br>
 Submitted. [https://arxiv.org/abs/2412.05732](https://arxiv.org/abs/2412.05732)
