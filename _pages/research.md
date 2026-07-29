@@ -6,18 +6,21 @@ author_profile: true
 ---
 
 ## Papers and Preprints
-1. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
-Preprint. [https://arxiv.org/pdf/2606.07490](https://arxiv.org/pdf/2606.07490)
+1. **Representations on the Top-Weight Cohomology of Smooth Toric Varieties** <br>
+In preparation.
+   
+2. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
+Preprint. [https://arxiv.org/abs/2606.07490](https://arxiv.org/abs/2606.07490)
 
-2. **The Singular Cohomology Ring of a Matroid** <br>
+3. **The Singular Cohomology Ring of a Matroid** <br>
 Submitted. [https://arxiv.org/abs/2412.05732](https://arxiv.org/abs/2412.05732)
 
-3. **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
+4. **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
 Submitted. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
 
 ## Dissertation
 **Tor Groups of the Stanley--Reisner Ring of a Matroid** <br>
-Most of the results from my dissertation appear in papers 1 and 2 above.
+Most of the results from my dissertation appear in papers 2 and 3 above.
 [Link to PDF](http://rave.ohiolink.edu/etdc/view?acc_num=osu1744360382902721).
 
 ## From my Undergrad Days
