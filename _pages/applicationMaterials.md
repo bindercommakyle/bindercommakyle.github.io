@@ -4,11 +4,11 @@ title: "Research"
 permalink: /research/
 author_profile: true
 ---
-**CV
+**CV**<br>
 
-**Research Statement
+**Research Statement** <br>
 
-**Teaching Statement
+**Teaching Statement** <br>
 
-**Drafts in Preparation
+**Drafts in Preparation** <br>
 
