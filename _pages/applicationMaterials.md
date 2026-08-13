@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Research"
-permalink: /research/
+title: "Application Materials"
+permalink: /appmaterials/
 author_profile: true
 ---
 **CV**<br>
