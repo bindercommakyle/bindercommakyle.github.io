@@ -8,6 +8,7 @@ redirect_from:
 ---
 
 I am a Postdoctoral Researcher at Louisiana State University interested in algebraic and tropical geometry, combinatorics, and matroid theory.
+**I am on the job market Fall 2026.**
 
 Previously, I was a graduate student at Ohio State. My advisor was [Eric Katz](https://people.math.osu.edu/katz.60/).
 
