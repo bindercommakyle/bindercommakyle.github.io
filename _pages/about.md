@@ -6,7 +6,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-**I am on the job market Fall 2026.**
+**I am on the job market for positions that begin Fall 2027.**
 
 I am a Postdoctoral Researcher at Louisiana State University interested in algebraic and tropical geometry, combinatorics, and matroid theory.
 
