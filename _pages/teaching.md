@@ -6,6 +6,7 @@ author_profile: true
 ---
 
 ## Instructor
+Math 4997 (LSU) -- Vertically Integrated Research: Combinatorial Topology, Fall 2026
 Math 1550 (LSU) -- Calculus I, Fall 2025
 
 ## Course TA
