@@ -6,20 +6,21 @@ author_profile: true
 ---
 
 ## Papers and Preprints
-1. **Augmented Singular Cohomology, Uniform Matroids, and Real-Rootedness** (with Lorenzo Vecchi) <br>
-In preparation (~20 pp., expected September 2026).
 
-2. **Representations on the Top-Weight Cohomology of Smooth Toric Varieties** <br>
-In preparation (~15 pp., expected October 2026).
-   
-3. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
+1. **Representations on the Top-Weight Cohomology of Smooth Toric Varieties** <br>
+In preparation (~20 pp., expected October 2026).
+
+2. **Augmented Singular Cohomology, Uniform Matroids, and Real-Rootedness** (with Lorenzo Vecchi) <br>
+Preprint. [https://arxiv.org/abs/2609.15946[(https://arxiv.org/abs/2609.15946)
+
+4. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
 Submitted. [https://arxiv.org/abs/2606.07490](https://arxiv.org/abs/2606.07490)
 
-4. **The Singular Cohomology Ring of a Matroid** <br>
+5. **The Singular Cohomology Ring of a Matroid** <br>
 Submitted. [https://arxiv.org/abs/2412.05732](https://arxiv.org/abs/2412.05732)
 
-5. **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
-Submitted. [https://arxiv.org/abs/2406.13973](https://arxiv.org/abs/2406.13973)
+6. **The Unipotent Tropical Fundamental Group** (with Eric Katz) <br>
+_J. London Math. Soc._ (2026), 114:e70701. [https://doi.org/10.1112/jlms.70701](https://doi.org/10.1112/jlms.70701)
 
 ## Dissertation
 **Tor Groups of the Stanley--Reisner Ring of a Matroid** <br>
