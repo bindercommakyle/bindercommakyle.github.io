@@ -11,7 +11,7 @@ author_profile: true
 In preparation (~20 pp., expected October 2026).
 
 2. **Augmented Singular Cohomology, Uniform Matroids, and Real-Rootedness** (with Lorenzo Vecchi) <br>
-Preprint. [https://arxiv.org/abs/2609.15946[(https://arxiv.org/abs/2609.15946)
+Preprint. [https://arxiv.org/abs/2609.15946](https://arxiv.org/abs/2609.15946)
 
 4. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
 Submitted. [https://arxiv.org/abs/2606.07490](https://arxiv.org/abs/2606.07490)
