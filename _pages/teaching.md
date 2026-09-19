@@ -6,6 +6,10 @@ author_profile: true
 ---
 
 ## Instructor
+Math 2065 (LSU) -- Elementary Differential Equations, Spring 2027 (Expected)
+
+Math 4023 (LSU) -- Applied Algebra, Spring 2027 (Expected)
+
 Math 4997 (LSU) -- Vertically Integrated Research: Combinatorial Topology, Fall 2026
 
 Math 1550 (LSU) -- Calculus I, Fall 2025
