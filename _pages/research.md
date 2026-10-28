@@ -7,11 +7,14 @@ author_profile: true
 
 ## Papers and Preprints
 
-1. **Representations on the Top-Weight Cohomology of Smooth Toric Varieties** <br>
-In preparation (~20 pp., expected October 2026).
+1. **Tropical Toric Vector Bundles on Projective Space** (with Sergio Cristancho, Caitlin Davis, Christopher Manon, Emma Pickard, and Mahrud Sayrafi) <br>
+In preparation (~25 pp., expected December 2026).
 
-2. **Augmented Singular Cohomology, Uniform Matroids, and Real-Rootedness** (with Lorenzo Vecchi) <br>
-Preprint. [https://arxiv.org/abs/2609.15946](https://arxiv.org/abs/2609.15946)
+2. **Representations on the Top-Weight Cohomology of Smooth Toric Varieties** <br>
+In preparation (~20 pp., expected November 2026).
+
+3. **Augmented Singular Cohomology, Uniform Matroids, and Real-Rootedness** (with Lorenzo Vecchi) <br>
+Submitted. [https://arxiv.org/abs/2609.15946](https://arxiv.org/abs/2609.15946)
 
 4. **The Singular Cohomology Ring of a Uniform Matroid: Combinatorics and Lefschetz Properties** <br>
 Submitted. [https://arxiv.org/abs/2606.07490](https://arxiv.org/abs/2606.07490)
@@ -24,7 +27,7 @@ _J. London Math. Soc._ (2026), 114:e70701. [https://doi.org/10.1112/jlms.70701](
 
 ## Dissertation
 **Tor Groups of the Stanley--Reisner Ring of a Matroid** <br>
-Most of the results from my dissertation appear in papers 3 and 4 above.
+Most of the results from my dissertation appear in papers 4 and 5 above.
 [Link to PDF](http://rave.ohiolink.edu/etdc/view?acc_num=osu1744360382902721).
 
 ## From my Undergrad Days
